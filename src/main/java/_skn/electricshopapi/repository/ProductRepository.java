@@ -1,6 +1,6 @@
 package _skn.electricshopapi.repository;
 
-import _skn.electricshopapi.model.Product;
+import _skn.electricshopapi.model.Entity.Product;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Flux;

@@ -1,8 +1,9 @@
 package _skn.electricshopapi.controller;
 
 import _skn.electricshopapi.model.ApiResponse;
-import _skn.electricshopapi.model.Product;
-import _skn.electricshopapi.service.ProductService;
+import _skn.electricshopapi.model.DTO.Product.response.ProductResponse;
+import _skn.electricshopapi.model.Entity.Product;
+import _skn.electricshopapi.service.product.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
@@ -18,7 +19,7 @@ public class ProductController {
 
     //  GET ALL PRODUCTS
     @GetMapping
-    public Mono<ApiResponse<List<Product>>> getAllProducts() {
+    public Mono<ApiResponse<List<ProductResponse>>> getAllProducts() {
         return productService.fetchAllProducts()
                 .collectList()
                 .map(products -> ApiResponse.success(

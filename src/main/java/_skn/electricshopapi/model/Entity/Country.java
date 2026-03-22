@@ -1,4 +1,4 @@
-package _skn.electricshopapi.model;
+package _skn.electricshopapi.model.Entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,17 +9,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "products")
-public class Product {
+@Document(collection = "countries")
+public class Country {
 
     @Id
-
-    private String productId;
-
-    private String productName;
-
-    private Double price;
-
-
+    private String countryId;
+    private String name;
+    private String currency;
 
 }
